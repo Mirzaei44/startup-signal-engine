@@ -1,0 +1,33 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# virtual env
+.venv/
+venv/
+
+# django
+db.sqlite3
+media/
+
+# environment
+.env
+
+# mac
+.DS_Store
+
+# logs
+*.log
+
+# celery beat
+celerybeat-schedule
+celerybeat-schedule-shm
+celerybeat-schedule-wal
+
+# redis dump
+dump.rdb
+
+# database
+db.sqlite3
