@@ -107,17 +107,17 @@ The dashboard exists mainly to **make backend behavior visible**.
 The project is built around a simple pipeline:
 
 External sources
-↓
+    ↓
 Ingestion services
-↓
-Celery background workers
-↓
+    ↓
+Celery workers
+    ↓
 Database
-↓
+    ↓
 Analytics layer
-↓
-API
-↓
+    ↓
+REST API
+    ↓
 Dashboard
 
 Each ingestion run is tracked so the system always knows:
@@ -162,18 +162,6 @@ The dashboard shows:
 - latest collected startups
 - ingestion job history
 
-Route:
-
-/
-
-### Dashboard template
-
-Add screenshot here:
-
-[ dashboard-screenshot.png ]
-
----
-
 # Background processing
 
 The ingestion pipeline runs using **Celery workers** and **Redis** as the message broker.
@@ -185,19 +173,12 @@ This allows the system to:
 - trigger manual ingestion runs
 - track execution results
 
-### Celery + Redis running
-
-Add screenshot here:
-
-[ celery-redis-running.png ]
-
----
 
 # Running locally
 
 Clone the repository
 
-git clone 
+git clone https://github.com/Mirzaei44/startup-signal-engine.git
 cd startup-signal-engine
 
 Create virtual environment
@@ -267,7 +248,9 @@ Some obvious directions if this system were expanded:
 
 # Notes
 
-This repository focuses on **backend architecture and data flow** rather than frontend polish.
+
+This project is intended as a backend portfolio project demonstrating data ingestion pipelines, async processing and observable backend systems built with Django.
+
 
 The UI is intentionally lightweight and exists only to expose the behavior of the backend system.
 
